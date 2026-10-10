@@ -24,4 +24,4 @@ Open http://localhost:3000. After changes have been pushed through ChatGPT, run 
 - `dist/crewmate.js`: the crewmate and hat SVG artwork.
 - `dist/assets/` and `dist/Thuy-Le-Resume.pdf`: portrait, fonts, favicon, and resume.
 
-Design preferences: dark ship panels and black windows, mint game controls, large readable text, minimal labels. The default crewmate is red with a suit and duck hat. Only crewmate speech is lowercase; preserve the capitalization of resume content. Respect the visitor's reduced-motion preference. Fonts are served locally under the licenses in `dist/assets/fonts/`.
+Design preferences: dark ship panels and black windows, mint game controls, large readable text, minimal labels. The default crewmate is red with a suit and duck hat; the favicon uses the plain red crewmate for clarity at small sizes. Only crewmate speech is lowercase; preserve the capitalization of resume content. Respect the visitor's reduced-motion preference. Fonts are served locally under the licenses in `dist/assets/fonts/`.

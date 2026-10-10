@@ -1,14 +1,1 @@
-<svg class="crewmate" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-label="Red crewmate wearing a suit and a duck hat">
-  <defs><clipPath id="body-clip"><path d="M97 136c0-39 15-58 54-58 39 0 58 23 58 58v106c0 15-15 24-34 24h-37c-25 0-41-12-41-31Z"/></clipPath></defs>
-  <g class="crew-character" stroke="#171a22" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
-    <g class="crew-backpack"><path d="M96 139H78c-10 0-16 7-16 18v72c0 11 5 16 15 16h20Z" fill="#9b142b"/><path d="M73 152v62" fill="none" stroke="#d92936" stroke-width="10"/></g>
-    <path class="crew-leg rear-leg" d="M157 228v61c0 12 8 17 20 17h19c9 0 13-5 13-15v-62" fill="#9b142b"/>
-    <path class="crew-leg front-leg" d="M97 230v62c0 11 7 16 18 16h17c11 0 17-6 17-18v-43" fill="#d92936"/>
-    <path class="crew-body" d="M97 136c0-39 15-58 54-58 39 0 58 23 58 58v106c0 15-15 24-34 24h-37c-25 0-41-12-41-31Z" fill="#9b142b"/>
-    <path d="M104 139c0-34 12-52 47-53 30 0 47 17 49 45v79c-16 21-58 22-96 8Z" fill="#d92936" stroke="none"/>
-    <g class="crew-suit" clip-path="url(#body-clip)"><path d="M94 185c38 7 79 5 117-4v89H92Z" fill="#343746" stroke-width="5"/><path d="m124 190 26 56 25-57" fill="#f0f1e8" stroke-width="4"/><path d="m151 204 8 8-7 9-7-9Z" fill="#e25259" stroke-width="2.5"/><path d="m150 219-7 24 9 10 8-10-7-24" fill="#d93842" stroke-width="2.5"/><path d="m122 189-8 19 14 6-5 12 27 31-19-66m44-3 9 20-13 6 5 11-25 32 16-66" fill="#53596d" stroke-width="3"/><path d="M151 258v14" fill="none" stroke-width="3"/><path d="M175 237h18" fill="none" stroke="#9b9daa" stroke-width="3"/></g>
-    <g class="crew-visor"><path d="M143 119c17-7 43-9 61-3 12 4 18 12 18 24 0 15-9 24-23 26-17 3-42 0-54-6-10-5-12-12-12-20 0-10 3-17 10-21Z" fill="#5b899c"/><path d="M145 123c17-7 44-8 57-2 10 4 14 10 14 18-14 10-57 7-77-1 0-7 2-11 6-15Z" fill="#a4d9e4" stroke="none"/><path d="M151 128c10-4 26-5 36-3" fill="none" stroke="#eefcff" stroke-width="8"/></g>
-    <g class="crew-hat" data-hat="duck"><g stroke-width="5"><path d="M109 72c-5-9-1-17 9-20-5-13 0-25 12-28 14-4 28 3 31 16 2 8-1 14-5 18l20-3c12-2 23 5 22 16-1 13-17 20-42 20-25 0-43-7-47-19Z" fill="#ffe165"/><path d="M159 42c7-1 16 3 17 7-4 5-12 7-19 3Z" fill="#ff9b43" stroke-width="3.5"/><circle cx="146" cy="40" r="4.3" fill="#202631" stroke="none"/><circle cx="147.2" cy="38.8" r="1.35" fill="#fffaf0" stroke="none"/><ellipse cx="141" cy="51" rx="5.5" ry="3" fill="#f3a77c" stroke="none"/><path d="M137 69c10-9 26-8 32 0 4 10-11 17-23 12" fill="#ffce42" stroke-width="3"/><path d="M124 75c2 4 4 6 8 7" fill="none" stroke="#fff1a5" stroke-width="3"/></g></g>
-
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 72"><g stroke="#171a22" stroke-width="4" stroke-linejoin="round"><path d="M16 27H9v25h8" fill="#9b142b"/><path d="M17 26C17 11 28 8 36 8s18 5 18 18v36c0 5-4 6-8 6h-8v-13h-9v13h-9c-3 0-4-3-4-6Z" fill="#d92936"/><rect x="28" y="24" width="31" height="17" rx="8" fill="#a4d9e4"/><path d="M34 28h14" stroke="#eefcff"/></g></svg>

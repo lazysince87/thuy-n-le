@@ -9,7 +9,7 @@ const avatarMarker=/<!-- CREWMATE_START -->[\s\S]*?<!-- CREWMATE_END -->/;
 if(!avatarMarker.test(html))throw new Error('Missing crewmate rendering markers');
 const marker=/<!-- PORTFOLIO_START -->[\s\S]*?<!-- PORTFOLIO_END -->/;
 if(!marker.test(html))throw new Error('Missing portfolio rendering markers');
-const favicon=crewmate().replace('viewBox="35 0 235 325"','xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320"').replaceAll('var(--crew-color)','#d92936').replaceAll('var(--crew-shadow)','#9b142b').replace(/<g class="crew-hand">[\s\S]*?<\/g>/,'').replace(/[ \t]+$/gm,'');
+const favicon=await readFile(new URL('dist/assets/crewmate.svg',root),'utf8');
 await writeFile(new URL('dist/assets/favicon.svg',root),favicon);
 html=html.replace(avatarMarker,`<!-- CREWMATE_START -->${crewmate()}<!-- CREWMATE_END -->`);
 html=html.replace(/(<span\b[^>]*\bdata-hat-icon="([^"]+)"[^>]*>)[\s\S]*?(<\/span>)/g,(_,start,name,end)=>start+hatIcon(name)+end);
