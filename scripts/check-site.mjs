@@ -9,6 +9,8 @@ const avatarMarker=/<!-- CREWMATE_START -->[\s\S]*?<!-- CREWMATE_END -->/;
 if(!avatarMarker.test(html))throw new Error('Missing crewmate rendering markers');
 const marker=/<!-- PORTFOLIO_START -->[\s\S]*?<!-- PORTFOLIO_END -->/;
 if(!marker.test(html))throw new Error('Missing portfolio rendering markers');
+const favicon=crewmate().replace('viewBox="35 0 235 325"','xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320"').replaceAll('var(--crew-color)','#d92936').replaceAll('var(--crew-shadow)','#9b142b').replace(/<g class="crew-hand">[\s\S]*?<\/g>/,'').replace(/[ \t]+$/gm,'');
+await writeFile(new URL('dist/assets/favicon.svg',root),favicon);
 html=html.replace(avatarMarker,`<!-- CREWMATE_START -->${crewmate()}<!-- CREWMATE_END -->`);
 html=html.replace(/(<span\b[^>]*\bdata-hat-icon="([^"]+)"[^>]*>)[\s\S]*?(<\/span>)/g,(_,start,name,end)=>start+hatIcon(name)+end);
 html=html.replace(marker,`<!-- PORTFOLIO_START -->\n${renderPortfolio()}\n<!-- PORTFOLIO_END -->`);
@@ -19,6 +21,8 @@ const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);
 if(new Set(ids).size!==ids.length)throw new Error('Duplicate HTML IDs');
 for(const m of js.matchAll(/getElementById\('([^']+)'\)/g))if(!ids.includes(m[1]))throw new Error(`Missing HTML element: ${m[1]}`);
 const assets=new Set([...html.matchAll(/(?:href|src)="\/(assets\/[^"#?]+|Thuy-Le-Resume\.pdf)"/g)].map(m=>m[1]));
+const css=await readFile(new URL('dist/styles.css',root),'utf8');
+for(const m of css.matchAll(/url\(['"]?\/(assets\/[^)'"]+)['"]?\)/g))assets.add(m[1]);
 for(const name of assets)await access(new URL(`dist/${name}`,root));
 for(const [id,controls] of [...html.matchAll(/id="([^"]+)"[^>]*role="tab"[^>]*aria-selected="[^"]+"[^>]*aria-controls="([^"]+)"/g)].map(m=>[m[1],m[2]])){if(!ids.includes(controls))throw new Error(`Missing tab panel for ${id}`);}
 for(const m of html.matchAll(/data-detail="([^"]+)"/g))if(!items.some(i=>i.id===m[1]))throw new Error(`Missing detail ${m[1]}`);
