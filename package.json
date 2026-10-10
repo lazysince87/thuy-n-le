@@ -1,0 +1,1 @@
+{"name":"thuy-le","version":"1.0.0","private":true,"type":"module","description":"Thuy Le's Among Us-inspired personal portfolio","scripts":{"check":"node --check dist/app.js && node --check dist/data.js && node --check dist/render.js && node --check dist/crewmate.js","build":"node scripts/check-site.mjs"}}
